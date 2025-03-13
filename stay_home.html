@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Going to Bed</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'EB Garamond', serif;
+            background-image: url('https://cdn.midjourney.com/2d1a9023-9d15-44f1-8cc8-ea16d5bfed73/0_0.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 24px;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .choices {
+            margin-top: 20px;
+        }
+
+        .choices a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .sleep {
+            color: #c3cfff;
+            border: 2px solid #c3cfff;
+            background: transparent;
+        }
+
+        .sleep:hover {
+            background: #c3cfff;
+            color: black;
+            box-shadow: 0px 0px 15px #c3cfff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>You decide to stay home...</h1>
+    <p>Under the moonlight, you close your eyes and drift into sleep. You have a dream...</p>
+
+    <div class="choices">
+        <a href="wolves_encounter.html" class="sleep">Continue dreaming...</a>
+    </div>
+
+</body>
+</html>

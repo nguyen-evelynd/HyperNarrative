@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Awakening</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            color: white;
+            text-align: center;
+            font-family: 'EB Garamond', serif;
+            background-image: url('https://cdn.midjourney.com/8bde69a2-3b7b-4ab1-8730-fc41565d7a3d/0_0.png'); /* Werewolf transformation scene */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 24px;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .choices {
+            margin-top: 20px;
+        }
+
+        .choices a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .embrace {
+            color: #ff4444;
+            border: 2px solid #ff4444;
+            background: transparent;
+        }
+
+        .embrace:hover {
+            background: #ff4444;
+            color: black;
+        }
+
+        .run {
+            color: #c3cfff;
+            border: 2px solid #c3cfff;
+            background: transparent;
+        }
+
+        .run:hover {
+            background: #c3cfff;
+            color: black;
+            box-shadow: 0px 0px 15px #c3cfff;
+        }
+
+        .end {
+            display: none;
+            margin-top: 30px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b3/Full_moon_forest.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .end a {
+            color: #c3cfff;
+            border: 2px solid #c3cfff;
+            background: transparent;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .end a:hover {
+            background: #c3cfff;
+            color: black;
+            box-shadow: 0px 0px 15px #c3cfff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>The moon turns <span style="color: #b31515e3;">red</span> ...</h1>
+    <p>You let fate decide. You feel something is awakening...</p>
+
+    <div class="choices">
+        <a href="#" class="embrace" onclick="embraceBeast()">Unleash the beast</a>
+        <a href="#" class="run" onclick="resistChange()">Try to resist</a>
+    </div>
+
+    <div id="ending" class="end">
+        <h1>The <span style="color: #b31515e3;">red</span> moon calls to you.</h1>
+        <p>You eliminate all the wolves. Your human thoughts fade...</p>
+        <p><span style="color: red;">What are you?</span></p>
+        <a href="index.html">Is this a dream?</a>
+    </div>
+
+    <script>
+        function embraceBeast() {
+            document.querySelector("body").style.backgroundImage = "none"; 
+            document.querySelector("body").style.backgroundColor = "black"; 
+            document.querySelector(".choices").style.display = "none";
+            document.querySelector("h1").innerText = "You let the power take control...";
+            document.querySelector("p").innerText = "Your human memories disappear as the beast awakens.";
+            setTimeout(() => {
+                document.getElementById("ending").style.display = "block";
+                document.querySelector("body").style.backgroundImage = "url('https://cdn.midjourney.com/4cbd32d6-0995-4d1a-9fa2-85d4d7ce548e/0_2.png')"; 
+            }, 3000); 
+        }
+
+        function resistChange() {
+            document.querySelector("body").style.backgroundImage = "none"; 
+            document.querySelector("body").style.backgroundColor = "black"; 
+            document.querySelector(".choices").style.display = "none";
+            document.querySelector("h1").innerText = "You fight against the power...";
+            document.querySelector("p").innerText = "But the hunger is stronger. You lose yourself...";
+            setTimeout(() => {
+                document.getElementById("ending").style.display = "block";
+                document.querySelector("body").style.backgroundImage = "url('https://cdn.midjourney.com/4cbd32d6-0995-4d1a-9fa2-85d4d7ce548e/0_2.png')"; 
+            }, 3000); 
+        }
+    </script>
+
+</body>
+</html>

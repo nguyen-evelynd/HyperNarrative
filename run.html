@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Forever</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'EB Garamond', serif;
+            background-image: url('https://cdn.midjourney.com/4bf08c86-8e75-4826-8b2e-ccd78c32cb5e/0_3.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 24px;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .choices {
+            margin-top: 20px;
+        }
+
+        .choices a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .grab {
+            color: #ffcc00;
+            border: 2px solid #ffcc00;
+            background: transparent;
+        }
+
+        .grab:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        .fall {
+            color: #ff4444;
+            border: 2px solid #ff4444;
+            background: transparent;
+        }
+
+        .fall:hover {
+            background: #ff4444;
+            color: black;
+        }
+
+        .end {
+            display: none; 
+            margin-top: 30px;
+        }
+
+        .end a {
+            color: #c3cfff;
+            border: 2px solid #c3cfff;
+            background: transparent;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .end a:hover {
+            background: #c3cfff;
+            color: black;
+            box-shadow: 0px 0px 15px #c3cfff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>You run as fast as you can...</h1>
+    <p>The wolves are right behind you! Suddenly, the ground vanishes beneath your feet...</p>
+
+    <div class="choices">
+        <a href="#" class="grab" onclick="grabBranch()">Try to grab a branch!</a>
+        <a href="#" class="fall" onclick="acceptFate()">Let go and fall...</a>
+    </div>
+
+    <div id="ending" class="end">
+        <h1>You awaken in an unknown place...</h1>
+        <p>The sky is different. The trees whisper in a language you don’t understand.</p>
+        <p><span style="color: red;">You could never wake up again...</span></p>
+        <a href="index.html">Is this a dream?</a>
+    </div>
+
+    <script>
+        function grabBranch() {
+            document.querySelector("body").style.backgroundImage = "none"; 
+            document.querySelector("body").style.backgroundColor = "black"; 
+            document.querySelector(".choices").style.display = "none";
+            document.querySelector("h1").innerText = "You reach for a branch...";
+            document.querySelector("p").innerText = "But it snaps in your hands. Darkness surrounds you...";
+            setTimeout(() => {
+                document.getElementById("ending").style.display = "block";
+            }, 3000); 
+        }
+
+        function acceptFate() {
+            document.querySelector("body").style.backgroundImage = "none"; 
+            document.querySelector("body").style.backgroundColor = "black"; 
+            document.querySelector(".choices").style.display = "none";
+            document.querySelector("h1").innerText = "You stop struggling...";
+            document.querySelector("p").innerText = "The wind rushes past as you embrace the abyss...";
+            setTimeout(() => {
+                document.getElementById("ending").style.display = "block";
+            }, 3000); 
+        }
+    </script>
+
+</body>
+</html>

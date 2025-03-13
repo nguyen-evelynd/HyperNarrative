@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Moonlit Night</title>
+
+    <!-- Google Fonts for Elegant Mysterious Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'EB Garamond', serif;
+            background-image: url('https://cdn.midjourney.com/f89e4f9f-f76a-480d-a880-b391a24badb0/0_3.png'); /* Eerie night background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Title: The Moon is Beautiful Tonight */
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Subtitle: Do you want to go out...? */
+        p {
+            font-size: 24px;
+            opacity: 1;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Choices */
+        .choices {
+            margin-top: 20px;
+        }
+
+        .choices a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        /* Yes Choice */
+        .yes {
+            color: #c3cfff;
+            border: 2px solid #c3cfff;
+            background: transparent;
+        }
+
+        .yes:hover {
+            background: #c3cfff;
+            color: black;
+            box-shadow: 0px 0px 15px #c3cfff;
+        }
+
+        /* No Choice */
+        .no {
+            color: #ff5555;
+            border: 2px solid #ff5555;
+            background: transparent;
+        }
+
+        .no:hover {
+            background: #ff5555;
+            color: black;
+            box-shadow: 0px 0px 15px #ff5555;
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>The moon is beautiful tonight...</h1>
+    <p>Do you want to go out?</p>
+
+    <div class="choices">
+        <a href="wolves_encounter.html" class="yes">Let's go out!</a>
+        <a href="stay_home.html" class="no">I should stay home.</a>
+    </div>
+
+</body>
+</html>
